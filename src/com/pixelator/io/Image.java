@@ -31,6 +31,5 @@ public class Image {
 
 	public int getWidth() {
 		return width;
-	}
-	
+	}	
 }

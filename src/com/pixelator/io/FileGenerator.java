@@ -3,7 +3,6 @@ package com.pixelator.io;
 import java.awt.Graphics;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -23,7 +22,7 @@ public class FileGenerator {
 
 	public void export(String extension, File file) {
 		try {			
-			ImageIO.write(this.image.getImage(), "JPG", new File(file.getPath() + extension));
+			ImageIO.write(this.image.getImage(), extension, new File(file.getPath()));
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "There was a Problem Exporting the Image, Please report the bug to the Developers");
 		}
